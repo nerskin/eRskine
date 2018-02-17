@@ -11,7 +11,7 @@ load_statsguru_results <- function(url) {
     
     while (!finished) {
         page_url <- paste0(url, ";page=", page)
-        html_raw <- xml2::read_html(url)
+        html_raw <- xml2::read_html(page_url)
         new_data <- rvest::html_table(html_raw, fill = TRUE)[[3]]
         new_data <- new_data[, names(new_data) != ""]
         if (new_data[[1]][[1]] == "No records available to match this query") {
