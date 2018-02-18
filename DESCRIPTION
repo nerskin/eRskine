@@ -5,7 +5,7 @@ Authors@R: person("Nicholas", "Erskine", email = "nicholas.erskine95@gmail.com",
 Description: Some small functions that I find useful to keep in one place.
 Depends: R (>= 3.4.3)
 Imports: rvest, xml2
-License: GPL 2
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
