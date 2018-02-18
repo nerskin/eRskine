@@ -12,6 +12,7 @@ load_statsguru_results <- function(url) {
     while (!finished) {
         page_url <- paste0(url, ";page=", page)
         success <- class(try(html_raw <- xml2::read_html(page_url)))!='try-error'
+	success <- success[1]#make warning go away
 	if (!success){
 		print('Failure to dowload webpage. Sleeping ten seconds before trying again')
 		Sys.sleep(10)
