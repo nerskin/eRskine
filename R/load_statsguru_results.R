@@ -4,7 +4,7 @@
 #' @param url The url of the results page
 #' @export
 
-load_statsguru_results <- function(url) {
+load_statsguru_results <- function(url,pause=0.1) {
     finished <- FALSE
     results <- NULL
     page <- 1
@@ -26,7 +26,7 @@ load_statsguru_results <- function(url) {
             results <- rbind(results, new_data)
         }
         page <- page + 1
-        Sys.sleep(0.1)
+        Sys.sleep(pause)
     }
     return(results)
 }
